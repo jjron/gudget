@@ -2,7 +2,7 @@
 
 const Router = require('express').Router;
 const jsonParser = require('body-parser').json();
-const User = require('../model/user.js');
+const User = require('../models/user.js');
 const debug = require('debug')('gudget:user-router');
 const basicAuthMiddleware = require('../lib/basic-auth-middleware.js');
 

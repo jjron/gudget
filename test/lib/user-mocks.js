@@ -1,7 +1,7 @@
 'use strict';
 
 const debug = require('debug')('gudget:user-mocks');
-const User = require('../../model/user.js');
+const User = require('../../models/user.js');
 
 module.exports = function(done) {
   debug('mock user');
