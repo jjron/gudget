@@ -1,4 +1,5 @@
 # Gudget App Git Ignore
+.coveralls.yml
 coverage
 html-reporter
 db
