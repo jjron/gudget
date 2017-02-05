@@ -10,7 +10,8 @@
     "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls ",
     "start": "node server.js",
-    "debug": "DEBUG=gu* npm run test"
+    "debug": "DEBUG=gu* npm run test",
+    "lint": "./node_modules/eslint/bin/eslint.js ."
   },
   "repository": {
     "type": "git",
