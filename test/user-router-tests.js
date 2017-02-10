@@ -116,4 +116,38 @@ describe('testing user-router', function() {
     });
   });
 
+  describe('testing DELETE /api/leave', function() {
+    beforeEach(userMock.bind(this));
+    it('should respond with 204 no content', done => {
+      superagent.delete(`${baseURL}/api/leave`)
+      .set('Authorization', `Bearer ${this.tempToken}`)
+      .then(res => {
+        expect(res.status).to.equal(204);
+        done();
+      })
+      .catch(done);
+    });
+
+    it('should respond with 401 unauthorized', done => {
+      superagent.delete(`${baseURL}/api/leave`)
+      .then(done)
+      .catch(err => {
+        expect(err.status).to.equal(401);
+        done();
+      })
+      .catch(done);
+    });
+
+    it('should respond with 404 not found', done => {
+      superagent.delete(`${baseURL}/api/quit`)
+      .set('Authorization', `Bearer ${this.tempToken}`)
+      .then(done)
+      .catch(err => {
+        expect(err.status).to.equal(404);
+        done();
+      })
+      .catch(done);
+    });
+  });
+
 });
