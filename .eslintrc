@@ -1,5 +1,8 @@
 {
-  "globals": {},
+  "globals": {
+    "__API_URL__": false,
+    "__DEBUG__": false
+  },
   "env": {
     "es6": true,
     "node": true,
